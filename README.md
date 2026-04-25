@@ -1,2 +1,2 @@
-# resumi
+# resume
 test ansible
