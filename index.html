@@ -33,7 +33,6 @@
     overflow-x: hidden;
   }
 
-  /* grid background */
   body::before {
     content: '';
     position: fixed;
@@ -55,7 +54,6 @@
     padding: 0 2rem;
   }
 
-  /* NAV */
   nav {
     position: relative;
     z-index: 10;
@@ -88,10 +86,7 @@
   }
   nav ul a:hover { color: var(--accent); }
 
-  /* HERO */
-  .hero {
-    padding: 8rem 0 6rem;
-  }
+  .hero { padding: 8rem 0 6rem; }
   .hero .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -117,10 +112,7 @@
     color: var(--text);
     margin-bottom: 1.5rem;
   }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
   .hero p {
     max-width: 480px;
     color: var(--muted);
@@ -128,12 +120,7 @@
     line-height: 1.8;
     margin-bottom: 3rem;
   }
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -160,10 +147,9 @@
   }
   .btn-ghost:hover { color: var(--text); }
 
-  /* STATS */
   .stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
@@ -171,27 +157,17 @@
     overflow: hidden;
     margin: 5rem 0;
   }
-  .stat {
-    background: var(--surface);
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
+  .stat { background: var(--surface); padding: 2rem 1.5rem; text-align: center; }
   .stat .num {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--accent);
     display: block;
     line-height: 1;
     margin-bottom: 0.5rem;
   }
-  .stat .label {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+  .stat .label { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* SECTION */
   section { padding: 5rem 0; border-top: 1px solid var(--border); }
   .section-label {
     display: flex;
@@ -203,53 +179,43 @@
     text-transform: uppercase;
     margin-bottom: 3rem;
   }
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* SKILLS GRID */
+  .skills-group { margin-bottom: 2.5rem; }
+  .skills-group-title {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-left: 2px;
+  }
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
   }
-  .skill-card {
-    background: var(--surface);
-    padding: 1.5rem;
-    transition: background 0.2s;
-  }
+  .skill-card { background: var(--surface); padding: 1.2rem 1.5rem; transition: background 0.2s; }
   .skill-card:hover { background: #1d2420; }
   .skill-card .skill-icon {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 16px;
+    margin-bottom: 0.8rem;
+    font-size: 14px;
   }
-  .skill-card .skill-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .skill-card .skill-sub {
-    font-size: 11px;
-    color: var(--muted);
-  }
+  .skill-card .skill-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
+  .skill-card .skill-sub { font-size: 11px; color: var(--muted); }
 
-  /* PROJECTS */
   .projects { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
   .project-card {
     background: var(--surface);
@@ -262,25 +228,9 @@
     cursor: default;
   }
   .project-card:hover { background: #1d2420; }
-  .project-card .proj-title {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    color: var(--text);
-    margin-bottom: 0.5rem;
-    font-weight: 400;
-  }
-  .project-card .proj-desc {
-    font-size: 13px;
-    color: var(--muted);
-    max-width: 500px;
-    line-height: 1.6;
-  }
-  .project-card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 1rem;
-  }
+  .project-card .proj-title { font-family: var(--font-serif); font-size: 1.3rem; color: var(--text); margin-bottom: 0.5rem; font-weight: 400; }
+  .project-card .proj-desc { font-size: 13px; color: var(--muted); max-width: 500px; line-height: 1.6; }
+  .project-card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
   .tag {
     font-size: 11px;
     color: var(--accent);
@@ -291,16 +241,9 @@
     letter-spacing: 0.05em;
     white-space: nowrap;
   }
-  .proj-arrow {
-    color: var(--muted);
-    font-size: 1.2rem;
-    flex-shrink: 0;
-    margin-top: 4px;
-    transition: color 0.2s, transform 0.2s;
-  }
+  .proj-arrow { color: var(--muted); font-size: 1.2rem; flex-shrink: 0; margin-top: 4px; transition: color 0.2s, transform 0.2s; }
   .project-card:hover .proj-arrow { color: var(--accent); transform: translate(3px, -3px); }
 
-  /* CONTACT */
   .contact-box {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -308,25 +251,10 @@
     padding: 3rem;
     text-align: center;
   }
-  .contact-box h2 {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--text);
-    margin-bottom: 1rem;
-  }
+  .contact-box h2 { font-family: var(--font-serif); font-size: 2.5rem; font-weight: 400; color: var(--text); margin-bottom: 1rem; }
   .contact-box h2 em { color: var(--accent); font-style: italic; }
-  .contact-box p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 2rem;
-  }
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
+  .contact-box p { color: var(--muted); font-size: 13px; margin-bottom: 2rem; }
+  .contact-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
   .contact-links a {
     color: var(--muted);
     text-decoration: none;
@@ -350,7 +278,6 @@
     z-index: 1;
   }
 
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -360,7 +287,6 @@
   .hero p        { animation: fadeUp 0.6s ease 0.2s both; }
   .hero-cta      { animation: fadeUp 0.6s ease 0.3s both; }
 
-  /* terminal cursor blink */
   .cursor {
     display: inline-block;
     width: 2px;
@@ -373,7 +299,7 @@
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
   @media (max-width: 600px) {
-    .stats { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
     .project-card { flex-direction: column; gap: 1rem; }
     .hero h1 { font-size: 2.8rem; }
   }
@@ -398,7 +324,7 @@
     <div class="hero">
       <p class="eyebrow">available for work</p>
       <h1>Building <em>cloud</em><br>infrastructure<br>that scales<span class="cursor"></span></h1>
-      <p>DevOps & Cloud Engineer specializing in AWS infrastructure, automation, and scalable systems. Turning complex architectures into clean, maintainable code.</p>
+      <p>DevOps & Cloud Engineer specializing in AWS infrastructure, automation, Kubernetes, and Terraform. Turning complex architectures into clean, maintainable code.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View projects →</a>
         <a href="#contact" class="btn-ghost">Get in touch</a>
@@ -407,22 +333,54 @@
 
     <div class="stats">
       <div class="stat"><span class="num">AWS</span><span class="label">Primary cloud</span></div>
-      <div class="stat"><span class="num">10+</span><span class="label">Services used</span></div>
-      <div class="stat"><span class="num">99%</span><span class="label">Uptime target</span></div>
+      <div class="stat"><span class="num">15+</span><span class="label">Tools mastered</span></div>
+      <div class="stat"><span class="num">K8s</span><span class="label">Orchestration</span></div>
+      <div class="stat"><span class="num">IaC</span><span class="label">Terraform first</span></div>
     </div>
 
     <section id="skills">
       <div class="section-label">skills &amp; tools</div>
-      <div class="skills-grid">
-        <div class="skill-card"><div class="skill-icon">☁</div><div class="skill-name">AWS</div><div class="skill-sub">EC2, VPC, ASG, EFS, RDS</div></div>
-        <div class="skill-card"><div class="skill-icon">⚙</div><div class="skill-name">Ansible</div><div class="skill-sub">Playbooks, roles, handlers</div></div>
-        <div class="skill-card"><div class="skill-icon">#</div><div class="skill-name">Terraform</div><div class="skill-sub">IaC & provisioning</div></div>
-        <div class="skill-card"><div class="skill-icon">🐳</div><div class="skill-name">Docker</div><div class="skill-sub">Containers & images</div></div>
-        <div class="skill-card"><div class="skill-icon">$</div><div class="skill-name">Bash</div><div class="skill-sub">Automation scripting</div></div>
-        <div class="skill-card"><div class="skill-icon">λ</div><div class="skill-name">Lambda</div><div class="skill-sub">Serverless functions</div></div>
-        <div class="skill-card"><div class="skill-icon">⚖</div><div class="skill-name">Load Balancing</div><div class="skill-sub">NLB, ALB, ASG</div></div>
-        <div class="skill-card"><div class="skill-icon">🔒</div><div class="skill-name">IAM & Security</div><div class="skill-sub">Policies, roles, SG</div></div>
+
+      <div class="skills-group">
+        <div class="skills-group-title">Cloud & Infrastructure</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon">☁</div><div class="skill-name">AWS</div><div class="skill-sub">EC2, VPC, ASG, EFS, RDS</div></div>
+          <div class="skill-card"><div class="skill-icon">⬡</div><div class="skill-name">Terraform</div><div class="skill-sub">IaC, modules, state</div></div>
+          <div class="skill-card"><div class="skill-icon">☸</div><div class="skill-name">Kubernetes</div><div class="skill-sub">Pods, services, ingress</div></div>
+          <div class="skill-card"><div class="skill-icon">🐳</div><div class="skill-name">Docker</div><div class="skill-sub">Images, compose, registry</div></div>
+        </div>
       </div>
+
+      <div class="skills-group">
+        <div class="skills-group-title">Automation & Scripting</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon">$</div><div class="skill-name">Bash</div><div class="skill-sub">Scripts, cron, automation</div></div>
+          <div class="skill-card"><div class="skill-icon">⚙</div><div class="skill-name">Ansible</div><div class="skill-sub">Playbooks, roles, handlers</div></div>
+          <div class="skill-card"><div class="skill-icon">λ</div><div class="skill-name">Lambda</div><div class="skill-sub">Serverless, event-driven</div></div>
+          <div class="skill-card"><div class="skill-icon">🐍</div><div class="skill-name">Python</div><div class="skill-sub">Scripting & tooling</div></div>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-title">OS, Networking & Security</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon">🐧</div><div class="skill-name">Linux</div><div class="skill-sub">Ubuntu, Amazon Linux</div></div>
+          <div class="skill-card"><div class="skill-icon">⚖</div><div class="skill-name">Load Balancing</div><div class="skill-sub">NLB, ALB, nginx</div></div>
+          <div class="skill-card"><div class="skill-icon">🔒</div><div class="skill-name">IAM & Security</div><div class="skill-sub">Policies, roles, SG</div></div>
+          <div class="skill-card"><div class="skill-icon">🌐</div><div class="skill-name">Networking</div><div class="skill-sub">VPC, subnets, DNS</div></div>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <div class="skills-group-title">CI/CD & Build Tools</div>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon">⎇</div><div class="skill-name">Git</div><div class="skill-sub">GitHub, branching, PRs</div></div>
+          <div class="skill-card"><div class="skill-icon">▶</div><div class="skill-name">GitHub Actions</div><div class="skill-sub">Pipelines, workflows</div></div>
+          <div class="skill-card"><div class="skill-icon">◈</div><div class="skill-name">Jenkins</div><div class="skill-sub">Jobs, agents, pipelines</div></div>
+          <div class="skill-card"><div class="skill-icon">📦</div><div class="skill-name">Helm</div><div class="skill-sub">K8s package manager</div></div>
+        </div>
+      </div>
+
     </section>
 
     <section id="projects">
@@ -434,11 +392,29 @@
             <div class="proj-title">Auto Scaling Infrastructure</div>
             <div class="proj-desc">Full AWS setup with VPC, NLB, ASG, and EFS. Bash-automated deployment with idempotency checks and per-step error handling.</div>
             <div class="tags">
-              <span class="tag">AWS</span>
-              <span class="tag">ASG</span>
-              <span class="tag">NLB</span>
-              <span class="tag">EFS</span>
-              <span class="tag">Bash</span>
+              <span class="tag">AWS</span><span class="tag">ASG</span><span class="tag">NLB</span><span class="tag">EFS</span><span class="tag">Bash</span>
+            </div>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="proj-title">Terraform AWS Deployment</div>
+            <div class="proj-desc">Infrastructure as Code for provisioning full AWS environments — VPC, subnets, security groups, EC2, and load balancers with reusable modules.</div>
+            <div class="tags">
+              <span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">IaC</span><span class="tag">EC2</span><span class="tag">VPC</span>
+            </div>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="proj-title">Kubernetes App Deployment</div>
+            <div class="proj-desc">Containerized application deployed on Kubernetes with deployments, services, ingress, and resource limits configured via YAML manifests.</div>
+            <div class="tags">
+              <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">nginx</span>
             </div>
           </div>
           <div class="proj-arrow">↗</div>
@@ -449,10 +425,7 @@
             <div class="proj-title">Serverless Raffle App</div>
             <div class="proj-desc">AWS serverless application using Lambda, DynamoDB, and API Gateway. Handles participant registration, counting, and random draw logic.</div>
             <div class="tags">
-              <span class="tag">Lambda</span>
-              <span class="tag">DynamoDB</span>
-              <span class="tag">API Gateway</span>
-              <span class="tag">Node.js</span>
+              <span class="tag">Lambda</span><span class="tag">DynamoDB</span><span class="tag">API Gateway</span><span class="tag">Node.js</span>
             </div>
           </div>
           <div class="proj-arrow">↗</div>
@@ -463,10 +436,18 @@
             <div class="proj-title">Ansible Automation Lab</div>
             <div class="proj-desc">Collection of Ansible playbooks for provisioning EC2 instances — installing packages, managing services, and deploying web applications.</div>
             <div class="tags">
-              <span class="tag">Ansible</span>
-              <span class="tag">EC2</span>
-              <span class="tag">nginx</span>
-              <span class="tag">Apache</span>
+              <span class="tag">Ansible</span><span class="tag">EC2</span><span class="tag">nginx</span><span class="tag">Apache</span><span class="tag">Linux</span>
+            </div>
+          </div>
+          <div class="proj-arrow">↗</div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="proj-title">Bash Infrastructure Scripts</div>
+            <div class="proj-desc">Bash automation scripts for AWS resource management — idempotent create/delete workflows with error handling, AWS CLI queries, and summary reports.</div>
+            <div class="tags">
+              <span class="tag">Bash</span><span class="tag">AWS CLI</span><span class="tag">Linux</span><span class="tag">Automation</span>
             </div>
           </div>
           <div class="proj-arrow">↗</div>
